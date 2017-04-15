@@ -6,6 +6,7 @@ Add this to your bash profile. Call it with `sinatra_turntable <your_project_nam
 ![](https://media.giphy.com/media/kHXW69kaIZIGc/giphy.gif)
 
 Once done installing, use `rake db:create` to create a postgres database, or `rake -T` for a list of available rake tasks.
+Based on [JohnrBell's](https://github.com/JohnrBell) rad [Sinatra Touch Project Creator](https://github.com/JohnrBell/Sinatra_Project_Creator)
 ```
 function sinatra_turntable(){
   if [ "$#" -ne 1 ]
@@ -65,5 +66,5 @@ function sinatra_turntable(){
       echo "Please respond with y/n"
       return
     fi
-    subl . #change this line to your editor of choice. 
+    vim 
 ```
