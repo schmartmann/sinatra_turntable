@@ -2,6 +2,7 @@
 ![](https://media.giphy.com/media/hrxXnzVoLr74k/giphy.gif)
 
 Add this to your bash profile. Call it with `sinatra_turntable <your_project_name>`. If you'd like ActiveRecord, simply respond with `y` to the prompt. 
+
 ![](https://media.giphy.com/media/kHXW69kaIZIGc/giphy.gif)
 
 Once done installing, use `rake db:create` to create a postgres database, or `rake -T` for a list of available rake tasks.
