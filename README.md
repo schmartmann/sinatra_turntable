@@ -10,7 +10,7 @@ Once done installing, use `rake db:create` to create a postgres database, or `ra
 function sinatra_turntable(){
   if [ "$#" -ne 1 ]
   then
-    echo "You must provide a project name. Usage: 'sinatra_touch [name]'"
+    echo "You must provide a project name. Usage: 'sinatra_turntable [name]'"
     return
   fi
     mkdir $1
