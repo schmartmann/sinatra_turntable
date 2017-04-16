@@ -7,6 +7,8 @@ Add this to your bash profile. Call it with `sinatra_turntable <your_project_nam
 
 Once done installing, use `rake db:create` to create a postgres database, or `rake -T` for a list of available rake tasks.
 Based on [JohnrBell's](https://github.com/JohnrBell) rad [Sinatra Touch Project Creator](https://github.com/JohnrBell/Sinatra_Project_Creator)
+
+Check out `example/` for a sample project setup.
 ```
 function sinatra_turntable(){
   if [ "$#" -ne 1 ]
