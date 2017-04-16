@@ -1,0 +1,13 @@
+development: 
+  adapter: postgresql 
+  database: trout_fishing_db 
+  username: postgres 
+  password: postgres 
+  host: localhost 
+
+production: 
+  adapter: postgresql 
+  database: trout_fishing_db 
+  username: ENV['USER_NAME'] 
+  password: ENV['USER_PASS'] 
+  host: localhost

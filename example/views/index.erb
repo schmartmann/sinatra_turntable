@@ -1,0 +1,7 @@
+<h1>Here is a list of Trout</h1>
+<ul>
+  <% @trouts.each do |trout| %>
+    <li><a href='<%=trout.id%>'> Name: <%= trout.name %>.</a></li>
+  <% end %>
+</ul>
+
