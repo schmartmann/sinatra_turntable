@@ -69,4 +69,5 @@ function sinatra_turntable(){
       return
     fi
     vim 
+}
 ```
