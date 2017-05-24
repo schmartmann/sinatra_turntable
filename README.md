@@ -9,7 +9,8 @@ It's ideal for situations where Ruby on Rails is too cumbersome, but Sinatra alo
 ![](https://media.giphy.com/media/kHXW69kaIZIGc/giphy.gif)
 
 Add the code snippet below to your bash profile. 
-```function sinatra_turntable(){
+```
+function sinatra_turntable(){
   if [ "$#" -ne 1 ]
   then
     echo "You must provide a project name. Usage: 'sinatra_turntable [name]'"
