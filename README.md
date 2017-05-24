@@ -3,7 +3,7 @@
 
 Sinatra Turntable is a bash script that, with two simple commands, allows developers to quickly spin up a full MVC web app with Sinatra and ActiveRecord wrapping a postgresql database.
 
-It's ideal for situations where Ruby on Rails is too cumbersome, but Sinatra alone doesn't cut it. An example would be an app that relies on one or two tables that you need set up quickly.
+It's ideal for situations where Ruby on Rails is too cumbersome, but Sinatra alone doesn't cut it. An example would be an app that relies on one or two tables that you need to set up in a hurry.
 
 ### Installation
 ![](https://media.giphy.com/media/kHXW69kaIZIGc/giphy.gif)
