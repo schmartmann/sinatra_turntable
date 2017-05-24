@@ -77,6 +77,7 @@ Then, in your CLI, call the script like so: `sinatra_turntable <your_project_nam
 If you'd like ActiveRecord, simply respond with `y` to the prompt. (If not, enter `n` and the script will skip installing/configuring ActiveRecord and postgresql files.)
 
 Once done installing, use `rake db:create` to create a postgres database, or `rake -T` for a list of available rake tasks.
-Based on [JohnrBell's](https://github.com/JohnrBell) rad [Sinatra Touch Project Creator](https://github.com/JohnrBell/Sinatra_Project_Creator)
 
 Check out `example/` for a sample project setup.
+
+Credit: Based on [Sinatra Touch Project Creator](https://github.com/JohnrBell/Sinatra_Project_Creator)
