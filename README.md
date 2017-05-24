@@ -5,16 +5,10 @@ Sinatra Turntable is a bash script that, with two simple commands, allows develo
 It's ideal for situations where Ruby on Rails is too cumbersome, but Sinatra alone doesn't cut it. An example would be an app that relies on one or two tables that you need set up quickly.
 
 ### Installation
-Add this to your bash profile. Call it with `sinatra_turntable <your_project_name>`. If you'd like ActiveRecord, simply respond with `y` to the prompt. 
-
 ![](https://media.giphy.com/media/kHXW69kaIZIGc/giphy.gif)
 
-Once done installing, use `rake db:create` to create a postgres database, or `rake -T` for a list of available rake tasks.
-Based on [JohnrBell's](https://github.com/JohnrBell) rad [Sinatra Touch Project Creator](https://github.com/JohnrBell/Sinatra_Project_Creator)
-
-Check out `example/` for a sample project setup.
-```
-function sinatra_turntable(){
+Add the code snippet below to your bash profile. 
+```function sinatra_turntable(){
   if [ "$#" -ne 1 ]
   then
     echo "You must provide a project name. Usage: 'sinatra_turntable [name]'"
@@ -75,3 +69,12 @@ function sinatra_turntable(){
     vim 
 }
 ```
+
+Then, in your CLI, call the script like so: `sinatra_turntable <your_project_name>`. 
+
+If you'd like ActiveRecord, simply respond with `y` to the prompt. (If not, enter `n` and the script will skip installing/configuring ActiveRecord and postgresql files.)
+
+Once done installing, use `rake db:create` to create a postgres database, or `rake -T` for a list of available rake tasks.
+Based on [JohnrBell's](https://github.com/JohnrBell) rad [Sinatra Touch Project Creator](https://github.com/JohnrBell/Sinatra_Project_Creator)
+
+Check out `example/` for a sample project setup.
