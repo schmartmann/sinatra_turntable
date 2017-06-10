@@ -8,7 +8,7 @@ It's ideal for situations where Ruby on Rails is too cumbersome, but Sinatra alo
 ### Installation
 ![](https://media.giphy.com/media/kHXW69kaIZIGc/giphy.gif)
 
-Add the code snippet below to your bash profile. 
+Add the code snippet below to your bash profile.
 ```
 function sinatra_turntable(){
   if [ "$#" -ne 1 ]
@@ -39,14 +39,14 @@ function sinatra_turntable(){
 
     echo -e '"use strict";\n(function(){\n\n})();' > public/js/script.js
     mkdir lib
-    printf 'module Sinatra\n  class Server < Sinatra::Base\n    get "/" do\n      erb :index\n    end\n  end\nend' > server.rb
-    printf 'require "sinatra/base"\n# require "sinatra/reloader"\nrequire_relative "server"\nrun Sinatra::Server' > config.ru
+    printf 'require "sinatra/reloader"\n\nclass Sinatra::Application\n\n  configure :development do\n    register Sinatra::Reloader\n  end\n\n  get "/" do\n    erb :index\n  end\n\nend' > server.rb
+    printf 'require "sinatra"\nrequire_relative "server"\nrun Sinatra::Application' > config.ru
 
     read -p "Would you like to set up ActiveRecord for this project? (y/n)" input_cmd
     if [[ -n "$input_cmd" && "$input_cmd"=y ]]
       then
         bundle init
-          echo -e "source 'https://rubygems.org'\ngem 'sinatra' \ngem 'activerecord', '4.2.5' \ngem 'sinatra-activerecord' \ngem 'rake'\ngem'thin' \ngem'require_all' \ngem 'pg' \ngroup :development do\n  gem 'shotgun'\n  gem 'pry'\n  gem 'tux'\n  gem 'sqlite3'\nend" > Gemfile
+          echo -e "source 'https://rubygems.org'\ngem 'sinatra' \ngem 'activerecord', '4.2.5' \ngem 'sinatra-activerecord' \ngem 'sinatra-contrib'\ngem 'rake'\ngem'thin' \ngem'require_all' \ngem 'pg' \ngroup :development do\n  gem 'shotgun'\n  gem 'pry'\n  gem 'tux'\n  gem 'sqlite3'\nend" > Gemfile
         bundle install
         mkdir models
         mkdir db/migrate
@@ -68,11 +68,11 @@ function sinatra_turntable(){
       echo "Please respond with y/n"
       return
     fi
-    vim 
+    vim
 }
 ```
 
-Then, in your CLI, call the script like so: `sinatra_turntable <your_project_name>`. 
+Then, in your CLI, call the script like so: `sinatra_turntable <your_project_name>`.
 
 If you'd like ActiveRecord, simply respond with `y` to the prompt. (If not, enter `n` and the script will skip installing/configuring ActiveRecord and postgresql files.)
 

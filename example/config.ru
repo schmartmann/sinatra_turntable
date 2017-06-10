@@ -1,5 +1,4 @@
 require 'sinatra/activerecord'
-require "sinatra/base"
-# require "sinatra/reloader"
+require "sinatra"
 require_relative "server"
-run Sinatra::Server
+run Sinatra::Application
